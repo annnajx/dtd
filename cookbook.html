@@ -94,8 +94,8 @@
                     </div> -->
                   </li>
 
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="index.html" aria-haspopup="true" aria-expanded="false">
                   The Market <i class="fa fa-angle-down"></i>
                 </a>
                 <!-- <div class="dropdown-menu">
@@ -105,7 +105,7 @@
                 </div> -->
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="index.html" aria-haspopup="true" aria-expanded="false">
                   No Waste Space <i class="fa fa-angle-down"></i>
                 </a>
                 <!-- <div class="dropdown-menu">
@@ -115,7 +115,7 @@
                 </div> -->
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="index.html" aria-haspopup="true" aria-expanded="false">
                   Events <i class="fa fa-angle-down"></i>
                 </a>
                  <!-- <div class="dropdown-menu">
@@ -124,8 +124,8 @@
                   <a class="dropdown-item" href="full-gallery.html">Full Width Gallery</a>
                 </div> -->
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="cookbook.html" aria-haspopup="true" aria-expanded="false">
                   Cookbook <i class="fa fa-angle-down"></i>
                 </a>
                 <!-- <div class="dropdown-menu">
@@ -264,7 +264,7 @@
     </header>
     <!-- Header Area wrapper End -->
 
-    <form action="/index.html" method="post">
+    <!-- <form action="cookbook.html" method="post" enctype="multipart/form-data">
       <ul>
         <li>
           <label for="name">Name:</label>
@@ -274,14 +274,120 @@
           <label for="msg">Message:</label>
           <textarea id ="msg" name="user_message"></textarea>
         </li>
+        <li class="button">
+            <button type="submit">Post!</button>
+        </li>
       </ul>
+    </form> -->
+
+    <form action="cookbook.html" method="post">
+      Name: <input type ="text" name="name"><br>
+      Recipe: <input type="text" name="recipe"><br>
+      <input type ="submit">
     </form>
+
+    User: <?html echo $_POST["name"]; ?><br>
+    Recipe: <?html echo $_POST["recipe"]; ?>
+  
+   
+
+    <style>
+    form {
+      /* Center the form on the page */
+      margin: 0 auto;
+      width: 400px;
+      /* Form outline */
+      padding: 1em;
+      border: 1px solid #CCC;
+      border-radius: 1em;
+    }
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    form li + li {
+      margin-top: 1em;
+    }
+    
+    label {
+      /* Uniform size & alignment */
+      display: inline-block;
+      width: 90px;
+      text-align: right;
+    }
+    
+    input, 
+    textarea {
+      /* To make sure that all text fields have the same font settings
+         By default, textareas have a monospace font */
+      font: 1em sans-serif;
+    
+      /* Uniform text field size */
+      width: 300px;
+      box-sizing: border-box;
+    
+      /* Match form field borders */
+      border: 1px solid #999;
+    }
+    
+    input:focus, 
+    textarea:focus {
+      /* Additional highlight for focused elements */
+      border-color: #000;
+    }
+    
+    textarea {
+      /* Align multiline text fields with their labels */
+      vertical-align: top;
+    
+      /* Provide space to type some text */
+      height: 5em;
+    }
+    
+    .button {
+      /* Align buttons with the text fields */
+      padding-left: 90px; /* same size as the label elements */
+    }
+    
+    button {
+      /* This extra margin represent roughly the same space as the space
+         between the labels and their text fields */
+      margin-left: .5em;
+    }
+  </style>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>PHP form submission example</title>
+    <style>
+      form {
+        width: 420px;
+      }
+
+      div {
+        margin-bottom: 20px;
+      }
+
+      label {
+        display: inline-block;
+        width: 240px;
+        text-align: right;
+        padding-right: 10px;
+      }
+
+      button, input {
+        float: right;
+      }
+    </style>
+  
 
     <!-- <textarea>Type your recipe here! :)</textarea> -->
 
-    <li class="button">
-      <button type="submit">Post!</button>
-    </li>
+    
 
     <!-- Footer Section Start -->
     <footer id="footer" class="footer-area section-padding">
